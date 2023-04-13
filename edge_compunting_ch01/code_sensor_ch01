@@ -1,0 +1,47 @@
+// Sistema de alarme vinheria
+void setup() {
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(A0, INPUT);
+  pinMode(5, OUTPUT);
+}
+int NivelLuz(){
+  int valorLDR = analogRead(A0);
+  
+  if(valorLDR < 100) {
+    return 12;		//Vermelho-> luz alta
+  }
+  else if(valorLDR >= 100 && valorLDR < 900) {
+    return 11;		//Amarelo-> luz media
+  }
+  else {
+    return 10; 		//Verde-> luz baixa
+  }
+}
+void alarme(int nivel) {
+  if(nivel == 10) {
+    digitalWrite(10, HIGH);//verde
+    digitalWrite(11, LOW);
+    digitalWrite(12, LOW);
+  }
+  else if(nivel == 11) {
+    digitalWrite(10, HIGH);//verde
+    digitalWrite(11, HIGH);//amarela
+    digitalWrite(12, LOW);
+  }
+  else {
+    digitalWrite(10, LOW);
+    digitalWrite(11, LOW);
+    digitalWrite(12, HIGH); //vermelha
+    digitalWrite(5, HIGH); // liga campainha
+  delay(3000); // espera 3 segundos
+  digitalWrite(5, LOW); // desliga campainha
+  delay(1500); // espera 3 segundos
+}
+  }
+void loop() {
+  int nivel = NivelLuz();
+  alarme(nivel);
+  delay(1000);
+}
