@@ -14,7 +14,15 @@
 
  <div id="voltar" onmouseover="mudarCor()" onmouseleave="restaurarCor()"><button> <a id="botao" href="index.html">Voltar</a> </button><br></div>
  <br> 
- 
+ <div>
+    Digite seu nome:  <input type="text" pattern="[A-Za-z]+" id="nome" name="nomeS" placeholder="Nome"> <br>
+    Digite seu email: <input type="email" id="email" name="emailS" placeholder="Email"> <br>
+    Insira sua idade  : <input type="number" id="idade" name="idadeS" placeholder="Idade"> <br>
+    <button onclick="Enviar()">Enviar</button>
+    <br><br>
+    <a id="final"></a>
+
+</div>
 
 </body>
 </html>
