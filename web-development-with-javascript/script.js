@@ -1,3 +1,5 @@
+
+
 function Enviar() {
     let nome = document.getElementsByName("nomeS")[0].value;
     let email = document.getElementsByName("emailS")[0].value;
@@ -35,9 +37,11 @@ function Validar(nome, email, idade) {
         minhaDiv.style.backgroundColor = "lightgreen";
     }
 }
+
 function mudarCor() {
     var minhaDiv = document.getElementById("voltar");
     minhaDiv.style.backgroundColor = "red";
+  }
 function restaurarCor() {
     var minhaDiv = document.getElementById("voltar");
     minhaDiv.style.backgroundColor = "white";
