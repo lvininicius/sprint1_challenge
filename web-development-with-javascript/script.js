@@ -38,3 +38,7 @@ function Validar(nome, email, idade) {
 function mudarCor() {
     var minhaDiv = document.getElementById("voltar");
     minhaDiv.style.backgroundColor = "red";
+function restaurarCor() {
+    var minhaDiv = document.getElementById("voltar");
+    minhaDiv.style.backgroundColor = "white";
+}
