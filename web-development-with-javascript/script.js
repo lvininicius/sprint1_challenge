@@ -17,3 +17,21 @@ function Validar(nome, email, idade) {
     else if (email === "") {
         alert("Por favor, insira seu email.");
         return;
+    }
+    else if (!email.includes("@"||"."))
+    {
+        alert('Por favor, insira um email válido.');
+        return;
+    }
+    else if (idade === "") {
+        alert("Por favor, insira sua idade.");
+        return;
+    }
+    else {
+        let info = 'Nome: ' + nome + ' ; Email: ' + email + ' ; Idade: ' + idade;
+        console.log(info);
+        document.getElementById("final").textContent = info
+        var minhaDiv = document.getElementById("final");
+        minhaDiv.style.backgroundColor = "lightgreen";
+    }
+}
