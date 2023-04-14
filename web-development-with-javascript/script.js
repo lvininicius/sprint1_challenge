@@ -35,3 +35,6 @@ function Validar(nome, email, idade) {
         minhaDiv.style.backgroundColor = "lightgreen";
     }
 }
+function mudarCor() {
+    var minhaDiv = document.getElementById("voltar");
+    minhaDiv.style.backgroundColor = "red";
