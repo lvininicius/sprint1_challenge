@@ -7,7 +7,7 @@
 
 Cocluido, apenas execute o codigo de geolocalização
 
-Processo para Windowns
+*Processo para Windowns
 1 - acesse o site (https://www.python.org/) e realize o download da ultima versão do python.
 2 - abra o seu power shell executando como admistrador.
 3 - Acesse a pasta onde está o arquivo das bibliotecas "config-start-win.txt"
